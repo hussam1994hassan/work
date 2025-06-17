@@ -1,0 +1,12 @@
+{
+  "name": "simple-github-action",
+  "version": "1.0.0",
+  "description": "Simple Node.js project to test GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "Hossam",
+  "license": "MIT"
+}
+
