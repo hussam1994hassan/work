@@ -1,0 +1,23 @@
+name: Internet Speed Test
+
+on:
+  workflow_dispatch: # تشغيل يدوي من GitHub
+
+jobs:
+  speedtest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔽 Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 📡 Install speedtest-cli
+        run: sudo apt-get update && sudo apt-get install -y speedtest-cli
+
+      - name: 🚀 Run Speed Test
+        run: |
+          echo "Running speed test..."
+          speedtest-cli
+
+      - name: ✅ Done
+        run: echo "Speed test completed."
